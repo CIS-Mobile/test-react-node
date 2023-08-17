@@ -1,0 +1,6 @@
+[submodule "nodejs"]
+	path = nodejs
+	url = git@github.com:CIS-Mobile/test-nodejs.git
+[submodule "react"]
+	path = react
+	url = git@github.com:CIS-Mobile/test-react.git
