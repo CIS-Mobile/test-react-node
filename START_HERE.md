@@ -13,6 +13,29 @@
 4. Try to access the frontend via <a href="localhost:3001/">localhost:3001/</a>
 5. Use postman to test the login endpoint on the server using the following information:
 <code>
+    const axios = require('axios');
+    let data = JSON.stringify({
+        "email": "test@gmail.com",
+        "password": "Aa123456!"
+    });
+
+    let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'localhost:4000/v1/auth/login',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        data : data
+    };
+
+    axios.request(config)
+        .then((response) => {
+            console.log(JSON.stringify(response.data));
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 
 </code>
 
