@@ -28,7 +28,7 @@ services:
       JWT_VERIFY_EMAIL_EXPIRATION_MINUTES: 10
       # Other environment variables...
     volumes:
-      - ./nodejs:/usr/src/app # Mount the local nodejs folder
+      - ./nodejs:/usr/src/node-app # Mount the local nodejs folder
 
   mongodb:
     image: mongo:latest
